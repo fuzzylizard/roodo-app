@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { TextField, Button} from '@material-ui/core'
 
 class TodoList extends Component {
 
@@ -13,13 +14,15 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="header">
           <form onSubmit={this.props.addItem}>
-            <input 
+            <TextField 
+                name="todo"
+                label="Todo Item"
                 ref={this.props.inputElement} 
                 value={this.props.currentItem.text}
                 onChange={this.props.handleInput}
                 placeholder="Task" 
               />
-            <input type="submit" value="Add Task" />
+            <Button type="submit" color="primary" variant="contained">Submit</Button>
           </form>
         </div>
       </div>

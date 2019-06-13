@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoList from './TodoList'
 import TodoItems from './TodoItems'
-import './App.css';
+import Typography from '@material-ui/core/Typography'
 
 class App extends React.Component {
 
@@ -55,6 +55,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Typography variant="h1" align="center" gutterBottom>Todo List</Typography>
         <TodoList 
             addItem={this.addItem} 
             inputElement={this.inputElement} 
